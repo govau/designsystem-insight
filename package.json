@@ -11,6 +11,10 @@
 		"build": "npm run build:css",
     "watch": "npm run build && npm run watch:site || npm run watch:sass"
   },
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/govau/designsystem-insights"
+	},
   "author": "Commonwealth of Australia, DTA",
   "license": "MIT",
   "dependencies": {
