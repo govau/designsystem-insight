@@ -1,0 +1,15 @@
+# system files
+.DS_Store
+.idea
+
+
+# node / npm / sass
+node_modules
+.sass-cache
+validation-report.json
+validation-status.json
+npm-debug.log
+
+
+# artifacts
+pancake/sass/pancake.scss

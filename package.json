@@ -1,0 +1,35 @@
+{
+  "name": "designsystem-insights",
+  "version": "0.1.0",
+  "description": "Insights for the Australian Government Design System",
+  "scripts": {
+    "start": "node server/index.js",
+    "start:local": "node server/index.js local",
+    "build:css": "sass ./pancake/sass/main.scss ./site/style.css --style compressed",
+    "watch:site": "browser-sync start --server site --files site",
+    "watch:sass": "onchange 'pancake/sass/*.scss' -- npm run build:css",
+    "watch": "npm run watch:site | npm run watch:sass"
+  },
+  "author": "Commonwealth of Australia, DTA",
+  "license": "MIT",
+  "pancake": {
+    "auto-save": true,
+    "plugins": true,
+    "ignore": [],
+    "sass": {
+      "modules": false,
+      "location": "pancake/sass/",
+      "name": "pancake.scss"
+    }
+  },
+  "dependencies": {
+    "@gov.au/grid-12": "^2.0.6",
+    "@gov.au/responsive-media": "^2.0.9",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "onchange": "^4.1.0",
+    "sass": "^1.9.2"
+  }
+}
